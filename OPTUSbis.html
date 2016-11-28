@@ -1,0 +1,255 @@
+<div>
+	<div class="container " id="main" role="main">
+		<div class="alert alert-danger alert-dismissible" role="alert" style="display:none">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+			<span id="errmsg"></span>
+		</div>
+		<!-- .container -->
+		<div class="container-fluid">
+			<ol class="breadcrumb">
+			  <li><a href="#/">Performance</a></li>
+			  <li class="active">Summary</li>
+			</ol>
+
+			<div class="btn-group toggles" data-toggle="buttons">
+			  <label class="btn btn-default active" onclick="toggleVarvDolCusAcc(1)">
+			    <input type="radio" name="options" id="option1" autocomplete="off" checked> $
+			  </label>
+			  <label class="btn btn-default" onclick="toggleVarvDolCusAcc(2)">
+			    <input type="radio" name="options" id="option2" autocomplete="off"> Acc
+			  </label>
+			  <label class="btn btn-default" onclick="toggleVarvDolCusAcc(3)">
+			    <input type="radio" name="options" id="option3" autocomplete="off"> Cus
+			  </label>
+			</div>
+
+			<div class="btn-group toggles" data-toggle="buttons">
+			  <label class="btn btn-default active" onclick="toggleVarvScale(1)">
+			    <input type="radio" name="options" id="option1" autocomplete="off" checked> unit
+			  </label>
+			  <label class="btn btn-default" onclick="toggleVarvScale(1000)">
+			    <input type="radio" name="options" id="option2" autocomplete="off"> k
+			  </label>
+			  <label class="btn btn-default" onclick="toggleVarvScale(1000000)">
+			    <input type="radio" name="options" id="option3" autocomplete="off"> m
+			  </label>
+			  <label class="btn btn-default" onclick="toggleVarvScale(1000000000)">
+			    <input type="radio" name="options" id="option3" autocomplete="off"> b
+			  </label>			  
+			</div>
+
+			<div style="padding-left: 60px; padding-right: 60px;">
+				<svg viewBox="0 0 1015 400" xmlns="http://www.w3.org/2000/svg">
+					<svg x="0" y="0" width="145" height="200" viewBox="0 0 145 200">
+							<rect x="0" y="0" width="145" height="200" style="fill: rgb(248, 248, 248);"/>
+								<rect x="0" y="0" width="145" height="25" style="fill: rgb(230, 230, 230);"/>
+						  		<text x="70" y="15" text-anchor="middle" style="font-size: 11px;" dy=".3em">
+						  			Pre Instrallation
+						  		</text>
+
+						  		<ellipse cx="70" cy="45" rx="12" ry="12" onclick="selectActivities('Modem Delivery','R')" style="fill: rgb(255, 0, 0); stroke: rgb(255, 0, 0);"/>
+						  		<text x="70" y="45" text-anchor="middle" onclick="selectActivities('Modem Delivery','R')" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1R"></text>
+
+						  		<ellipse cx="70" cy="75" rx="12" ry="12" style="fill: rgb(255, 128, 0); stroke: rgb(255, 128, 0);"/>
+						  		<text x="70" y="75" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1A"></text>		
+
+						  		<ellipse cx="70" cy="105" rx="12" ry="12" style="fill: rgb(255, 255, 0); stroke: rgb(255, 255, 0);"/>
+						  		<text x="70" y="105" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1Y"></text>	
+
+						  		<ellipse cx="70" cy="135" rx="12" ry="12" style="fill: rgb(0, 255, 64); stroke: rgb(0, 255, 64);"/>
+						  		<text x="70" y="135" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1G"></text>
+
+						  		<ellipse cx="70" cy="175" rx="20" ry="20" style="fill: rgb(220, 220, 220); stroke: rgb(220, 220, 220);"/>
+						  		<text x="70" y="175" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1Total"></text>
+					</svg>	
+
+					<svg x="290" y="0" width="145" height="200" viewBox="0 0 145 200">
+							<rect x="0" y="0" width="145" height="200" style="fill: rgb(248, 248, 248);"/>
+								<rect x="0" y="0" width="145" height="25" style="fill: rgb(230, 230, 230);"/>
+						  		<text x="70" y="15" text-anchor="middle" style="font-size: 11px;" dy=".3em">
+						  			Pre Instrallation
+						  		</text>
+
+						  		<ellipse cx="70" cy="45" rx="12" ry="12" onclick="selectActivities('Modem Delivery','R')" style="fill: rgb(255, 0, 0); stroke: rgb(255, 0, 0);"/>
+						  		<text x="70" y="45" text-anchor="middle" onclick="selectActivities('Modem Delivery','R')" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1R"></text>
+
+						  		<ellipse cx="70" cy="75" rx="12" ry="12" style="fill: rgb(255, 128, 0); stroke: rgb(255, 128, 0);"/>
+						  		<text x="70" y="75" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1A"></text>		
+
+						  		<ellipse cx="70" cy="105" rx="12" ry="12" style="fill: rgb(255, 255, 0); stroke: rgb(255, 255, 0);"/>
+						  		<text x="70" y="105" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1Y"></text>	
+
+						  		<ellipse cx="70" cy="135" rx="12" ry="12" style="fill: rgb(0, 255, 64); stroke: rgb(0, 255, 64);"/>
+						  		<text x="70" y="135" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1G"></text>
+
+						  		<ellipse cx="70" cy="175" rx="20" ry="20" style="fill: rgb(220, 220, 220); stroke: rgb(220, 220, 220);"/>
+						  		<text x="70" y="175" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1Total"></text>
+					</svg>						
+
+					<svg x="725" y="0" width="145" height="200" viewBox="0 0 145 200">
+							<rect x="0" y="0" width="145" height="200" style="fill: rgb(248, 248, 248);"/>
+								<rect x="0" y="0" width="145" height="25" style="fill: rgb(230, 230, 230);"/>
+						  		<text x="70" y="15" text-anchor="middle" style="font-size: 11px;" dy=".3em">
+						  			Pre Instrallation
+						  		</text>
+
+						  		<ellipse cx="70" cy="45" rx="12" ry="12" onclick="selectActivities('Modem Delivery','R')" style="fill: rgb(255, 0, 0); stroke: rgb(255, 0, 0);"/>
+						  		<text x="70" y="45" text-anchor="middle" onclick="selectActivities('Modem Delivery','R')" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1R"></text>
+
+						  		<ellipse cx="70" cy="75" rx="12" ry="12" style="fill: rgb(255, 128, 0); stroke: rgb(255, 128, 0);"/>
+						  		<text x="70" y="75" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1A"></text>		
+
+						  		<ellipse cx="70" cy="105" rx="12" ry="12" style="fill: rgb(255, 255, 0); stroke: rgb(255, 255, 0);"/>
+						  		<text x="70" y="105" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1Y"></text>	
+
+						  		<ellipse cx="70" cy="135" rx="12" ry="12" style="fill: rgb(0, 255, 64); stroke: rgb(0, 255, 64);"/>
+						  		<text x="70" y="135" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1G"></text>
+
+						  		<ellipse cx="70" cy="175" rx="20" ry="20" style="fill: rgb(220, 220, 220); stroke: rgb(220, 220, 220);"/>
+						  		<text x="70" y="175" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1Total"></text>
+					</svg>
+
+					<svg x="870" y="0" width="145" height="200" viewBox="0 0 145 200">
+							<rect x="0" y="0" width="145" height="200" style="fill: rgb(248, 248, 248);"/>
+								<rect x="0" y="0" width="145" height="25" style="fill: rgb(230, 230, 230);"/>
+						  		<text x="70" y="15" text-anchor="middle" style="font-size: 11px;" dy=".3em">
+						  			Pre Instrallation
+						  		</text>
+
+						  		<ellipse cx="70" cy="45" rx="12" ry="12" onclick="selectActivities('Modem Delivery','R')" style="fill: rgb(255, 0, 0); stroke: rgb(255, 0, 0);"/>
+						  		<text x="70" y="45" text-anchor="middle" onclick="selectActivities('Modem Delivery','R')" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1R"></text>
+
+						  		<ellipse cx="70" cy="75" rx="12" ry="12" style="fill: rgb(255, 128, 0); stroke: rgb(255, 128, 0);"/>
+						  		<text x="70" y="75" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1A"></text>		
+
+						  		<ellipse cx="70" cy="105" rx="12" ry="12" style="fill: rgb(255, 255, 0); stroke: rgb(255, 255, 0);"/>
+						  		<text x="70" y="105" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1Y"></text>	
+
+						  		<ellipse cx="70" cy="135" rx="12" ry="12" style="fill: rgb(0, 255, 64); stroke: rgb(0, 255, 64);"/>
+						  		<text x="70" y="135" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1G"></text>
+
+						  		<ellipse cx="70" cy="175" rx="20" ry="20" style="fill: rgb(220, 220, 220); stroke: rgb(220, 220, 220);"/>
+						  		<text x="70" y="175" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1Total"></text>
+					</svg>	
+
+					<svg x="145" y="200" width="145" height="200" viewBox="0 0 145 200">
+							<rect x="0" y="0" width="145" height="200" style="fill: rgb(248, 248, 248);"/>
+								<rect x="0" y="0" width="145" height="25" style="fill: rgb(230, 230, 230);"/>
+						  		<text x="70" y="15" text-anchor="middle" style="font-size: 11px;" dy=".3em">
+						  			Pre Instrallation
+						  		</text>
+
+						  		<ellipse cx="70" cy="45" rx="12" ry="12" onclick="selectActivities('Modem Delivery','R')" style="fill: rgb(255, 0, 0); stroke: rgb(255, 0, 0);"/>
+						  		<text x="70" y="45" text-anchor="middle" onclick="selectActivities('Modem Delivery','R')" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1R"></text>
+
+						  		<ellipse cx="70" cy="75" rx="12" ry="12" style="fill: rgb(255, 128, 0); stroke: rgb(255, 128, 0);"/>
+						  		<text x="70" y="75" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1A"></text>		
+
+						  		<ellipse cx="70" cy="105" rx="12" ry="12" style="fill: rgb(255, 255, 0); stroke: rgb(255, 255, 0);"/>
+						  		<text x="70" y="105" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1Y"></text>	
+
+						  		<ellipse cx="70" cy="135" rx="12" ry="12" style="fill: rgb(0, 255, 64); stroke: rgb(0, 255, 64);"/>
+						  		<text x="70" y="135" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1G"></text>
+
+						  		<ellipse cx="70" cy="175" rx="20" ry="20" style="fill: rgb(220, 220, 220); stroke: rgb(220, 220, 220);"/>
+						  		<text x="70" y="175" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1Total"></text>
+					</svg>						
+
+					<svg x="290" y="200" width="145" height="200" viewBox="0 0 145 200">
+							<rect x="0" y="0" width="145" height="200" style="fill: rgb(248, 248, 248);"/>
+								<rect x="0" y="0" width="145" height="25" style="fill: rgb(230, 230, 230);"/>
+						  		<text x="70" y="15" text-anchor="middle" style="font-size: 11px;" dy=".3em">
+						  			Pre Instrallation
+						  		</text>
+
+						  		<ellipse cx="70" cy="45" rx="12" ry="12" onclick="selectActivities('Modem Delivery','R')" style="fill: rgb(255, 0, 0); stroke: rgb(255, 0, 0);"/>
+						  		<text x="70" y="45" text-anchor="middle" onclick="selectActivities('Modem Delivery','R')" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1R"></text>
+
+						  		<ellipse cx="70" cy="75" rx="12" ry="12" style="fill: rgb(255, 128, 0); stroke: rgb(255, 128, 0);"/>
+						  		<text x="70" y="75" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1A"></text>		
+
+						  		<ellipse cx="70" cy="105" rx="12" ry="12" style="fill: rgb(255, 255, 0); stroke: rgb(255, 255, 0);"/>
+						  		<text x="70" y="105" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1Y"></text>	
+
+						  		<ellipse cx="70" cy="135" rx="12" ry="12" style="fill: rgb(0, 255, 64); stroke: rgb(0, 255, 64);"/>
+						  		<text x="70" y="135" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1G"></text>
+
+						  		<ellipse cx="70" cy="175" rx="20" ry="20" style="fill: rgb(220, 220, 220); stroke: rgb(220, 220, 220);"/>
+						  		<text x="70" y="175" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1Total"></text>
+					</svg>	
+
+					<svg x="435" y="200" width="145" height="200" viewBox="0 0 145 200">
+							<rect x="0" y="0" width="145" height="200" style="fill: rgb(248, 248, 248);"/>
+								<rect x="0" y="0" width="145" height="25" style="fill: rgb(230, 230, 230);"/>
+						  		<text x="70" y="15" text-anchor="middle" style="font-size: 11px;" dy=".3em">
+						  			Pre Instrallation
+						  		</text>
+
+						  		<ellipse cx="70" cy="45" rx="12" ry="12" onclick="selectActivities('Modem Delivery','R')" style="fill: rgb(255, 0, 0); stroke: rgb(255, 0, 0);"/>
+						  		<text x="70" y="45" text-anchor="middle" onclick="selectActivities('Modem Delivery','R')" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1R"></text>
+
+						  		<ellipse cx="70" cy="75" rx="12" ry="12" style="fill: rgb(255, 128, 0); stroke: rgb(255, 128, 0);"/>
+						  		<text x="70" y="75" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1A"></text>		
+
+						  		<ellipse cx="70" cy="105" rx="12" ry="12" style="fill: rgb(255, 255, 0); stroke: rgb(255, 255, 0);"/>
+						  		<text x="70" y="105" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1Y"></text>	
+
+						  		<ellipse cx="70" cy="135" rx="12" ry="12" style="fill: rgb(0, 255, 64); stroke: rgb(0, 255, 64);"/>
+						  		<text x="70" y="135" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1G"></text>
+
+						  		<ellipse cx="70" cy="175" rx="20" ry="20" style="fill: rgb(220, 220, 220); stroke: rgb(220, 220, 220);"/>
+						  		<text x="70" y="175" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1Total"></text>
+					</svg>	
+
+					<svg x="580" y="200" width="145" height="200" viewBox="0 0 145 200">
+							<rect x="0" y="0" width="145" height="200" style="fill: rgb(248, 248, 248);"/>
+								<rect x="0" y="0" width="145" height="25" style="fill: rgb(230, 230, 230);"/>
+						  		<text x="70" y="15" text-anchor="middle" style="font-size: 11px;" dy=".3em">
+						  			Pre Instrallation
+						  		</text>
+
+						  		<ellipse cx="70" cy="45" rx="12" ry="12" onclick="selectActivities('Modem Delivery','R')" style="fill: rgb(255, 0, 0); stroke: rgb(255, 0, 0);"/>
+						  		<text x="70" y="45" text-anchor="middle" onclick="selectActivities('Modem Delivery','R')" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1R"></text>
+
+						  		<ellipse cx="70" cy="75" rx="12" ry="12" style="fill: rgb(255, 128, 0); stroke: rgb(255, 128, 0);"/>
+						  		<text x="70" y="75" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1A"></text>		
+
+						  		<ellipse cx="70" cy="105" rx="12" ry="12" style="fill: rgb(255, 255, 0); stroke: rgb(255, 255, 0);"/>
+						  		<text x="70" y="105" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1Y"></text>	
+
+						  		<ellipse cx="70" cy="135" rx="12" ry="12" style="fill: rgb(0, 255, 64); stroke: rgb(0, 255, 64);"/>
+						  		<text x="70" y="135" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1G"></text>
+
+						  		<ellipse cx="70" cy="175" rx="20" ry="20" style="fill: rgb(220, 220, 220); stroke: rgb(220, 220, 220);"/>
+						  		<text x="70" y="175" text-anchor="middle" style="white-space: pre; font-size: 9px;" dy=".3em" class="S1Total"></text>
+					</svg>																															
+				</svg>
+
+			</div>
+			<div class="S1A">
+				ciso
+			</div>
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">{{Title}}</h4>
+	      </div>
+	      <div class="qvobject" id="QVM01">
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>	
+
+	<script src="OPTUS.js"></script>
+
+</div>
+

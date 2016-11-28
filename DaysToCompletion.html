@@ -1,0 +1,42 @@
+<div>
+	<div class="container " id="main" role="main">
+		<div class="alert alert-danger alert-dismissible" role="alert" style="display:none">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+			<span id="errmsg"></span>
+		</div>
+		<!-- .container -->
+		<div class="container-fluid">
+			<div class="row padd" style="padding-left: 20px; padding-right: 20px;">
+				<div class="BgPanelThree">
+					<div class="col-lg-12 BgPanleHeader">
+						Average Days to Completion
+						<span id=""></span>
+					</div>
+					<div class="BgSeparator"></div>
+					<div id="qsChart06" class="qvobject DtailsTable"></div>
+				</div>				
+			</div>
+		</div>
+	</div>	
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">{{Title}}</h4>
+	      </div>
+	      <div class="qvobject" id="QVM01">
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>	
+
+	<script src="OPTUS.js"></script>
+
+</div>

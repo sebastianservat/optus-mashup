@@ -1,0 +1,180 @@
+<div>
+	<div class="container " id="main" role="main">
+		<div class="alert alert-danger alert-dismissible" role="alert" style="display:none">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+			<span id="errmsg"></span>
+		</div>
+		<!-- .container -->
+		<div class="container-fluid">
+			<div class="row" style="padding-left: 20px; padding-right: 20px;">
+				<div>
+	                <div class="panel">
+	                    <div class="panel-heading">
+	                        <div class="FilterHeader">
+	                            Filters
+	                        </div>
+	                        <a class="btn btn-clickable pull-right" href="#">
+	                            <i class="fa fa-chevron-down"></i> 
+	                        </a>
+	                        <div class="FilterSeparator">
+							</div>
+	                    </div>
+	                    
+	                    <div id="qvFilter01" class="panel-body FilterPannel">
+	                    </div>
+	                    
+	                </div>
+
+	                <div class="Tiles">
+
+						<div class="TileOne">
+							<div class="TileHeder">
+								Pre Installation
+							</div>
+							<div class="TileSeparator">	
+							</div>
+							<div class="TileBodyTop">
+								<table class="TailTable">
+									<tr class="TailTableBoxHeadre">
+										<td></td>
+										<td>Activities</td>
+									</tr>
+									<tr>
+										<td class="TailTableBoxDim">Fail</td>
+										<td id="mST1Fail" class="TailTableBoxRed"></td>								
+									</tr>
+									<tr>
+										<td class="TailTableBoxDim">Delay</td>
+										<td id="mST1DYL" class="TailTableBoxAmber"></td>								
+									</tr>	
+									<tr>
+										<td class="TailTableBoxDim">In Progress</td>
+										<td id="mST1EXC" class="TailTableBoxYellow"></td>								
+									</tr>
+									<tr>
+										<td class="TailTableBoxDim">NRD COM CAN</td>
+										<td id="mST1NRD" class="TailTableBoxGreen"></td>								
+									</tr>																							
+								</table>																							
+							</div>
+						</div>
+
+						<div class="TileTwo">
+							<div class="TileHeder">
+								Modem Delivery
+							</div>
+							<div class="TileSeparator">	
+							</div>
+							<div class="TileBodyTop">
+								<table class="TailTable">
+									<tr>
+										<td></td>
+										<td>Total</td>
+									</tr>
+									<tr>
+										<td class="TailTableBoxDim">Fail</td>
+										<td id="mST2Fail" class="TailTableBoxRed"></td>								
+									</tr>
+									<tr>
+										<td class="TailTableBoxDim">Delay</td>
+										<td id="mST2DYL" class="TailTableBoxAmber"></td>								
+									</tr>	
+									<tr>
+										<td class="TailTableBoxDim">In Progress</td>
+										<td id="mST2EXC" class="TailTableBoxYellow"></td>								
+									</tr>
+									<tr>
+										<td class="TailTableBoxDim">NRD COM CAN</td>
+										<td id="mST2NRD" class="TailTableBoxGreen"></td>								
+									</tr>																							
+								</table>																							
+							</div>
+						</div>	
+
+						<div class="TileThree">
+							<div class="TileHeder">
+								Service Activation
+							</div>
+							<div class="TileSeparator">	
+							</div>
+							<div class="TileBodyTop">
+								<table class="TailTable">
+									<tr>
+										<td></td>
+										<td>Total</td>
+									</tr>
+									<tr>
+										<td class="TailTableBoxDim">Fail</td>
+										<td id="mST2Fail" class="TailTableBoxRed"></td>								
+									</tr>
+									<tr>
+										<td class="TailTableBoxDim">Delay</td>
+										<td id="mST2DYL" class="TailTableBoxAmber"></td>								
+									</tr>	
+									<tr>
+										<td class="TailTableBoxDim">In Progress</td>
+										<td id="mST2EXC" class="TailTableBoxYellow"></td>								
+									</tr>
+									<tr>
+										<td class="TailTableBoxDim">NRD COM CAN</td>
+										<td id="mST2NRD" class="TailTableBoxGreen"></td>								
+									</tr>																							
+								</table>																							
+							</div>
+						</div>
+
+						<div class="TileFour">
+							<div class="TileHeder">
+								Order Complete Today
+							</div>
+							<div class="TileSeparator">	
+							</div>
+							<div class="TileBodyTop">
+								<table class="TailTable">
+									<tr>
+										<td></td>
+										<td>Total</td>
+									</tr>
+									<tr>
+										<td class="TailTableBoxDim">Fail</td>
+										<td id="mST2Fail" class="TailTableBoxRed"></td>								
+									</tr>
+									<tr>
+										<td class="TailTableBoxDim">Delay</td>
+										<td id="mST2DYL" class="TailTableBoxAmber"></td>								
+									</tr>	
+									<tr>
+										<td class="TailTableBoxDim">In Progress</td>
+										<td id="mST2EXC" class="TailTableBoxYellow"></td>								
+									</tr>
+									<tr>
+										<td class="TailTableBoxDim">NRD COM CAN</td>
+										<td id="mST2NRD" class="TailTableBoxGreen"></td>								
+									</tr>																							
+								</table>																							
+							</div>
+						</div>															
+					</div> 
+	            </div>
+			</div>
+		</div>		
+	</div>
+	<script src="OPTUS.js"></script>
+	<script>
+		//Panel
+$(document).on('click', '.panel-heading .btn-clickable', function(e){
+    var $this = $(this);
+    if(!$this.hasClass('panel-collapsed')) {
+		$this.parents('.panel').find('.panel-body').slideUp();
+		$this.addClass('panel-collapsed');
+		$this.find('i').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+	} else {
+		$this.parents('.panel').find('.panel-body').slideDown();
+		$this.removeClass('panel-collapsed');
+		$this.find('i').removeClass('fa-chevron-down').addClass('fa-chevron-up');
+	}
+})
+	</script>
+
+</div>
+

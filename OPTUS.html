@@ -1,0 +1,397 @@
+<div>
+	<div class="container " id="main" role="main">
+		<div class="alert alert-danger alert-dismissible" role="alert" style="display:none">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+			<span id="errmsg"></span>
+		</div>
+		<!-- .container -->
+		<div class="container-fluid">
+			<div class="row padd" style="padding-left: 20px; padding-right: 20px;">
+				<div class="BgPanelOne">
+					<div class="BgPanleHeader">
+						Order to Customer Expected Date	
+					</div>
+					<div class="BgSeparator"></div>
+					<div class="row">
+						<div class="col-lg-3 col-sm-3">
+							<div class="HomeTopKPIHeader" >Open Orders</div>
+							<div id="qsChart03" class="qvobject HomeTopKPI"></div>
+							<div class="HomeTopKPIHeader" >Orders on Track</div>
+							<div id="qsChart04" class="qvobject HomeTopKPI"></div>
+							<div class="HomeTopKPIHeader" >Delay Expected</div>							
+							<div id="qsChart05" class="qvobject HomeTopKPI"></div>
+
+						</div>
+						<div id="qsChart01" class="col-lg-8 col-sm-4 qvobject HomeTopChart"></div>
+					</div>
+				</div>
+				<div class="BgPanelTwo">
+					<div class="BgPanleHeader">
+						Activity Diagram
+					</div>	
+					<div class="BgSeparator"></div>	
+						<div class="Step StepOne">
+							<div class="StepHeader">Pre Installation 
+								<a href="#/Details" ><span class="badge badgeRed" id="mST1CriticalOrder"></span></a>
+							</div>
+							<div class="StepSeparator"></div>
+							<table class="StepTable">
+								<tr>
+									<td></td>
+									<td  class="TableHeader">Activities</td>
+								</tr>
+								<tr>
+									<td class="TableDimension">Fail</td>
+									<td class="TableMeasure TableBoxRed">
+										<a href="#/Details" onclick="selectActivities(1,'Fail')">
+											<div id="mST1Fail" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="TableDimension">Delay</td>
+									<td class="TableMeasure TableBoxAmber">
+										<a href="#/Details" onclick="selectActivities(1,'Delay')">
+											<div id="mST1DYL" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>	
+								<tr>
+									<td class="TableDimension">In Progress</td>
+									<td class="TableMeasure TableBoxYellow">
+										<a href="#/Details" onclick="selectActivities(1,'In Progress')">
+											<div id="mST1EXC" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="TableDimension">NRD COM CAN</td>
+									<td class="TableMeasure TableBoxGreen">
+										<a href="#/Details" onclick="selectActivities(1,'NRD COM CAN')">
+											<div id="mST1NRD" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>						
+							</table>																												
+						</div>	
+						<div class="Step StepTwo">
+							<div class="StepHeader">Equipement Delivery <span class="badge badgeRed" id="mST2CriticalOrder"></span></div>
+							<div class="StepSeparator"></div>
+							<table class="StepTable">
+								<tr>
+									<td></td>
+									<td  class="TableHeader">Activities</td>
+								</tr>
+								<tr>
+									<td class="TableDimension">Fail</td>
+									<td class="TableMeasure TableBoxRed">
+										<a href="#/Details" onclick="selectActivities(2,'Fail')">
+											<div id="mST2Fail" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="TableDimension">Delay</td>
+									<td class="TableMeasure TableBoxAmber">
+										<a href="#/Details" onclick="selectActivities(2,'Delay')">
+											<div id="mST2DYL" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>	
+								<tr>
+									<td class="TableDimension">In Progress</td>
+									<td class="TableMeasure TableBoxYellow">
+										<a href="#/Details" onclick="selectActivities(2,'In Progress')">
+											<div id="mST2EXC" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="TableDimension">NRD COM CAN</td>
+									<td class="TableMeasure TableBoxGreen">
+										<a href="#/Details" onclick="selectActivities(2,'NRD COM CAN')">
+											<div id="mST2NRD" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>																							
+							</table>																												
+						</div>
+						<div class="Step StepThree">
+							<div class="StepHeader">Service Activation <span class="badge badgeRed" id="mST3CriticalOrder"></span></div>
+							<div class="StepSeparator"></div>
+							<table class="StepTable">
+								<tr>
+									<td></td>
+									<td  class="TableHeader">Activities</td>
+								</tr>
+								<tr>
+									<td class="TableDimension">Fail</td>
+									<td class="TableMeasure TableBoxRed">
+										<a href="#/Details" onclick="selectActivities(3,'Fail')">
+											<div id="mST3Fail" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="TableDimension">Delay</td>
+									<td class="TableMeasure TableBoxAmber">
+										<a href="#/Details" onclick="selectActivities(3,'Delay')">
+											<div id="mST3DYL" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>	
+								<tr>
+									<td class="TableDimension">In Progress</td>
+									<td class="TableMeasure TableBoxYellow">
+										<a href="#/Details" onclick="selectActivities(3,'In Progress')">
+											<div id="mST3EXC" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="TableDimension">NRD COM CAN</td>
+									<td class="TableMeasure TableBoxGreen">
+										<a href="#/Details" onclick="selectActivities(3,'NRD COM CAN')">
+											<div id="mST3NRD" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>																							
+							</table>																												
+						</div>
+						<div class="Step StepFour">
+							<div class="StepHeader">Order Completed Today <span class="badge badgeRed" id="mST4CriticalOrder"></span></div>
+							<div class="StepSeparator"></div>
+							<table class="StepTable">
+								<tr>
+									<td></td>
+									<td  class="TableHeader">Activities</td>
+								</tr>
+								<tr>
+									<td class="TableDimension">Fail</td>
+									<td class="TableMeasure TableBoxRed">
+										<a href="#/Details" onclick="selectActivities(4,'Fail')">
+											<div id="mST4Fail" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="TableDimension">Delay</td>
+									<td class="TableMeasure TableBoxAmber">
+										<a href="#/Details" onclick="selectActivities(4,'Delay')">
+											<div id="mST4DYL" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>	
+								<tr>
+									<td class="TableDimension">In Progress</td>
+									<td class="TableMeasure TableBoxYellow">
+										<a href="#/Details" onclick="selectActivities(4,'In Progress')">
+											<div id="mST4EXC" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="TableDimension">NRD COM CAN</td>
+									<td class="TableMeasure TableBoxGreen">
+										<a href="#/Details" onclick="selectActivities(4,'NRD COM CAN')">
+											<div id="mST4NRD" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>																							
+							</table>																												
+						</div>
+						<div class="Step StepFive">
+							<div class="StepHeader">Installation Planning <span class="badge badgeRed" id="mST5CriticalOrder"></span></div>
+							<div class="StepSeparator"></div>
+							<table class="StepTable">
+								<tr>
+									<td></td>
+									<td  class="TableHeader">Activities</td>
+								</tr>
+								<tr>
+									<td class="TableDimension">Fail</td>
+									<td class="TableMeasure TableBoxRed">
+										<a href="#/Details" onclick="selectActivities(5,'Fail')">
+											<div id="mST5Fail" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="TableDimension">Delay</td>
+									<td class="TableMeasure TableBoxAmber">
+										<a href="#/Details" onclick="selectActivities(5,'Delay')">
+											<div id="mST5DYL" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>	
+								<tr>
+									<td class="TableDimension">In Progress</td>
+									<td class="TableMeasure TableBoxYellow">
+										<a href="#/Details" onclick="selectActivities(5,'In Progress')">
+											<div id="mST5EXC" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="TableDimension">NRD COM CAN</td>
+									<td class="TableMeasure TableBoxGreen">
+										<a href="#/Details" onclick="selectActivities(5,'NRD COM CAN')">
+											<div id="mST5NRD" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>																							
+							</table>																												
+						</div>
+						<div class="Step StepSix">
+							<div class="StepHeader">Installation Confiramtion <span class="badge badgeRed" id="mST6CriticalOrder"></span></div>
+							<div class="StepSeparator"></div>
+							<table class="StepTable">
+								<tr>
+									<td></td>
+									<td  class="TableHeader">Activities</td>
+								</tr>
+								<tr>
+									<td class="TableDimension">Fail</td>
+									<td class="TableMeasure TableBoxRed">
+										<a href="#/Details" onclick="selectActivities(6,'Fail')">
+											<div id="mST6Fail" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="TableDimension">Delay</td>
+									<td class="TableMeasure TableBoxAmber">
+										<a href="#/Details" onclick="selectActivities(6,'Delay')">
+											<div id="mST6DYL" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>	
+								<tr>
+									<td class="TableDimension">In Progress</td>
+									<td class="TableMeasure TableBoxYellow">
+										<a href="#/Details" onclick="selectActivities(6,'In Progress')">
+											<div id="mST6EXC" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="TableDimension">NRD COM CAN</td>
+									<td class="TableMeasure TableBoxGreen">
+										<a href="#/Details" onclick="selectActivities(6,'NRD COM CAN')">
+											<div id="mST6NRD" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>																							
+							</table>																												
+						</div>
+						<div class="Step StepSeven">
+							<div class="StepHeader">Installation Reschedule  <span class="badge badgeRed" id="mST7CriticalOrder"></span></div>
+							<div class="StepSeparator"></div>
+							<table class="StepTable">
+								<tr>
+									<td></td>
+									<td  class="TableHeader">Activities</td>
+								</tr>
+								<tr>
+									<td class="TableDimension">Fail</td>
+									<td class="TableMeasure TableBoxRed">
+										<a href="#/Details" onclick="selectActivities(7,'Fail')">
+											<div id="mST7Fail" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="TableDimension">Delay</td>
+									<td class="TableMeasure TableBoxAmber">
+										<a href="#/Details" onclick="selectActivities(7,'Delay')">
+											<div id="mST7DYL" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>	
+								<tr>
+									<td class="TableDimension">In Progress</td>
+									<td class="TableMeasure TableBoxYellow">
+										<a href="#/Details" onclick="selectActivities(7,'In Progress')">
+											<div id="mST7EXC" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="TableDimension">NRD COM CAN</td>
+									<td class="TableMeasure TableBoxGreen">
+										<a href="#/Details" onclick="selectActivities(7,'NRD COM CAN')">
+											<div id="mST7NRD" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>																							
+							</table>																												
+						</div>
+						<div class="Step StepEight">
+							<div class="StepHeader">Installation  <span class="badge badgeRed" id="mST8CriticalOrder"></span></div>
+							<div class="StepSeparator"></div>
+							<table class="StepTable">
+								<tr>
+									<td></td>
+									<td  class="TableHeader">Activities</td>
+								</tr>
+								<tr>
+									<td class="TableDimension">Fail</td>
+									<td class="TableMeasure TableBoxRed">
+										<a href="#/Details" onclick="selectActivities(8,'Fail')">
+											<div id="mST8Fail" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="TableDimension">Delay</td>
+									<td class="TableMeasure TableBoxAmber">
+										<a href="#/Details" onclick="selectActivities(8,'Delay')">
+											<div id="mST8DYL" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>	
+								<tr>
+									<td class="TableDimension">In Progress</td>
+									<td class="TableMeasure TableBoxYellow">
+										<a href="#/Details" onclick="selectActivities(8,'In Progress')">
+											<div id="mST8EXC" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="TableDimension">NRD COM CAN</td>
+									<td class="TableMeasure TableBoxGreen">
+										<a href="#/Details" onclick="selectActivities(8,'NRD COM CAN')">
+											<div id="mST8NRD" style="width: 100%"></div>
+										</a>
+									</td>
+								</tr>																							
+							</table>																												
+						</div>																														
+				</div>					
+			</div>
+		</div>
+	</div>	
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">{{Title}}</h4>
+	      </div>
+	      <div class="qvobject" id="QVM01">
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>	
+
+	<script src="OPTUS.js"></script>
+
+</div>
+
